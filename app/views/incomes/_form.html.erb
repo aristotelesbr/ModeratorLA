@@ -1,0 +1,15 @@
+<%= render 'error_messages', record: @income %>
+
+<%= form_for(@income) do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :salary %><br>
+    <%= f.text_field :salary %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

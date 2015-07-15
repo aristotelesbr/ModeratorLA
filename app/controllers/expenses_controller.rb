@@ -5,6 +5,7 @@ class ExpensesController < ApplicationController
     @expenses = Expense.all
     @total = Expense.total
     @total_card = Expense.total_card
+    @sum_salario = Expense.sum_salario
   end
 
   def new
