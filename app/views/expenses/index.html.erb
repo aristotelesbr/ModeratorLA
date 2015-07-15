@@ -1,1 +1,10 @@
-<h1> Welcome! </h1>
+<h1> Welcome!</h1>
+
+<% @expenses.each do |expense| %>
+<ul>
+    <li><%= link_to expense.description, expense %></li>
+      <%= expense.value %> |
+      <%= expense.card %>
+</ul>
+<% end %>
+<%= link_to 'actions.new', new_expense_path %>

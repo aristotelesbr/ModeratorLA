@@ -2,6 +2,7 @@ class ExpensesController < ApplicationController
   before_action :find_expense, only: [:show, :edit, :update, :destroy]
 
   def index
+    @expenses = Expense.all
   end
 
   def new
