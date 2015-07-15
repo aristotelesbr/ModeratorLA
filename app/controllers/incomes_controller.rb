@@ -5,6 +5,7 @@ class IncomesController < ApplicationController
   # GET /incomes.json
   def index
     @incomes = Income.all
+    @income = self.sum(:income)
   end
 
   # GET /incomes/1
