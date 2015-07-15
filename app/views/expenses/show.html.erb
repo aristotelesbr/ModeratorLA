@@ -1,0 +1,15 @@
+<p>
+  <strong>Valor:</strong>
+  <%= @expense.value %>
+</p>
+
+<p>
+  <strong>Descrição</strong>
+  <%= @expense.description %>
+</p>
+
+<%= link_to 'actions.back', root_path %>|
+<%= link_to 'actions.edit', edit_expense_path %>|
+<%= link_to 'actions.delete', expense_path(@expense), method: :delele,
+   data: { confirm: 'Deseja excluir?' } %>
+
