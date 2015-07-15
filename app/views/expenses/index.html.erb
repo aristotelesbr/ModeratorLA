@@ -1,10 +1,18 @@
-<h1> Welcome!</h1>
+<h1> Lista de despesas </h1>
+<div>
+  <% @expenses.each do |expense| %>
+    <ul>
+      <li><%= link_to expense.description, expense %></li>
+        <%= expense.value %> |
+        <%= expense.card %>
+    </ul>
+  <% end %>
 
-<% @expenses.each do |expense| %>
-<ul>
-    <li><%= link_to expense.description, expense %></li>
-      <%= expense.value %> |
-      <%= expense.card %>
-</ul>
-<% end %>
+  <p>
+    <strong>Total geral:</strong>
+      <%= @total %> $ |
+    <strong>Debito em cartões</strong>
+      <%= @total_card %> $
+  </p>
+</div>
 <%= link_to 'actions.new', new_expense_path %>

@@ -3,6 +3,8 @@ class ExpensesController < ApplicationController
 
   def index
     @expenses = Expense.all
+    @total = Expense.total
+    @total_card = Expense.total_card
   end
 
   def new
