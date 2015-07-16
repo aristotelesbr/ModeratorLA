@@ -11,14 +11,14 @@ class ExpensesController < ApplicationController
   end
 
   def new
-    @expense = Expense.new
+    @expense = current_user.expenses.build
   end
 
   def show
   end
 
   def create
-    @expense = Expense.new(expense_params)
+    @expense = current_user.expenses.build(expense_params)
 
     if @expense.save
       redirect_to @expense, notice: 'notice.expense.success'

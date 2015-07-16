@@ -4,8 +4,18 @@
 </p>
 
 <p>
-  <strong>Descrição</strong>
+  <strong>Descrição:</strong>
   <%= @expense.description %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @expense.user.email %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @expense.created_at.strftime("%d %b. %Y") %>
 </p>
 
 <%= link_to 'actions.back', root_path %>|

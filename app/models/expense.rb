@@ -1,6 +1,6 @@
 class Expense < ActiveRecord::Base
   validates :value, presence: true
-  belongs_to :income
+  belongs_to :user
 
   def self.total
     sum(:value)
