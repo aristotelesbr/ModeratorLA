@@ -3,7 +3,7 @@
     <strong>Receita</strong>
     <%= @result %>
   </p>
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Descrição</th>
@@ -13,14 +13,13 @@
 
   <tbody>
     <% @expenses.each do |expense| %>
-      <tr>
+      <tr class="active">
         <td><%= link_to expense.description, expense %></td>
         <td><%= expense.value %></td>
       </tr>
     <% end %>
   </tbody>
-</tbody>
-
+</table>
   <p>
     <strong>Total geral:</strong>
       <%= @total %> $ |
@@ -29,5 +28,5 @@
   </p>
 
 
-</table>
+
 <%= link_to 'actions.new', new_expense_path %>

@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Moderador</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%= render 'flash_messages' %>
+  <head>
+    <title>ModeradorA&L</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <body>
+    <div class="page">
+      <%= render 'flash_messages' %>
 
-</body>
+      <%= yield %>
+
+      <footer>
+        <p>
+          Aristóteles
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
