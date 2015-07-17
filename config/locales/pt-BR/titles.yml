@@ -1,0 +1,13 @@
+pt-BR:
+  titles:
+    expenses:
+      index: 'Relatório'
+      new: 'Adcionar despesa'
+      edit: 'Editar'
+      show: 'Detalhes'
+
+    incomes:
+      index: 'Lista de Rendas'
+      new: 'Adcionar'
+      edit: 'Editar'
+      show: 'Detalhes'

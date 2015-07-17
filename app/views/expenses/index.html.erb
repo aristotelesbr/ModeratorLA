@@ -19,13 +19,13 @@
     <% end %>
   </tbody>
 </table>
-  <p>
+  <p class="bg-danger">
     <strong>Total geral:</strong>
       <%= @total %> $ |
-    <strong>Debito em cartões</strong>
+    <strong>Debito em cartão:</strong>
       <%= @total_card %> $
   </p>
 
 
 
-<%= link_to 'actions.new', new_expense_path %>
+<%= link_to t('actions.add'), new_expense_path, class: "btn btn-default btn-lg" %>

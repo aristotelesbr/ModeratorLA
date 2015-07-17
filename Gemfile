@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 # Gems custom
 gem 'devise', '~> 3.5.1'
 gem 'bootstrap-sass', '~> 3.3.5.1'
-gem 'i18n', '~> 0.7.0'
-
+gem 'rails-i18n', '~> 4.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
