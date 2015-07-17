@@ -29,6 +29,48 @@ a img {
   padding: 50px 0;
 }
 
+header h1 {
+  display: inline-block;
+  line-height: 60px;
+  font-family: HelveticaNeue-Light, "Helvetica Neue Light", sans-serif;
+  font-size: 36px;
+  font-weight: 100;
+  border-left: 1px solid #ccc;
+  margin: 0;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+nav input {
+  font-size: 18px;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+nav li {
+  float: left;
+  list-style: none;
+  margin-left: 15px;
+}
+
+nav a {
+  color: #666;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   position: relative;
   margin-bottom: 20px;

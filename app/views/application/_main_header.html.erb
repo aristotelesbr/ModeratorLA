@@ -1,0 +1,27 @@
+<header>
+  <%= link_to root_path, class: 'logo' do %>
+    <%= image_tag 'logo.png' %>
+  <% end %>
+
+  <nav>
+    <% if user_signed_in? %>
+      <ul>
+         <li>
+          <%= current_user.email %>
+          </li>
+        <li>
+          <%=  button_to 'Sair', destroy_user_session_path, method: :delete %>
+        </li>
+      </ul>
+    <% else %>
+      <ul>
+          <li>
+            <%= link_to 'Entrar', new_user_session_path  %>
+          </li>
+      </ul>
+    <% end %>
+  </nav>
+
+  <h1><%= page_title %></h1>
+
+</header>
