@@ -1,20 +1,20 @@
 <p>
-  <strong>Valor:</strong>
+  <strong><%= t('labels.expense.show.value') %>:</strong>
   <%= @expense.value %>
 </p>
 
 <p>
-  <strong>Descrição:</strong>
+  <strong><%= t('labels.expense.show.description') %>:</strong>
   <%= @expense.description %>
 </p>
 
 <p>
-  <strong>Usuario:</strong>
+  <strong><%= t('labels.expense.show.card') %>:</strong>
   <%= @expense.user.email %>
 </p>
 
 <p>
-  <strong>Data:</strong>
+  <strong><%= t('labels.expense.show.date') %>:</strong>
   <%= @expense.created_at.strftime("%d %b. %Y") %>
 </p>
 

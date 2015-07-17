@@ -4,10 +4,10 @@ pt-BR:
       index: 'Relatório'
       new: 'Adcionar despesa'
       edit: 'Editar'
-      show: 'Detalhes'
+      show: 'Detalhes do registro'
 
     incomes:
       index: 'Lista de Rendas'
       new: 'Adcionar'
       edit: 'Editar'
-      show: 'Detalhes'
+      show: 'Detalhes do registro'

@@ -1,11 +1,8 @@
-<h1>Listing Incomes</h1>
-
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Salary</th>
-      <th colspan="3"></th>
+      <th>Nome</th>
+      <th>Salário</th>
     </tr>
   </thead>
 
@@ -14,9 +11,9 @@
       <tr>
         <td><%= income.name %></td>
         <td><%= income.salary %></td>
-        <td><%= link_to 'Show', income %></td>
-        <td><%= link_to 'Edit', edit_income_path(income) %></td>
-        <td><%= link_to 'Destroy', income, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('actions.show'), income %></td>
+        <td><%= link_to t('actions.edit'), edit_income_path(income) %></td>
+        <td><%= link_to t('actions.destroy'), income, method: :delete, data: { confirm: 'Excluir Registro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +21,4 @@
 
 <br>
 
-<%= link_to 'New Income', new_income_path %>
+<%= link_to t('actions.add'), new_income_path, class: 'btn btn-default btn-lg' %>

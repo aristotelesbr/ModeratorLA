@@ -1,3 +1,7 @@
 pt-BR:
   actions:
     add: 'Adicionar'
+    show: 'Vizualizar'
+    edit: 'Editar'
+    destroy: 'Deletar'
+    back: 'Voltar'

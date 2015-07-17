@@ -2,14 +2,14 @@
 
 <%= form_for(@income) do |f| %>
   <div>
-    <%= f.label :name %><br>
+    <%= f.label :name, t('labels.income.name') %><br>
     <%= f.text_field :name %>
   </div>
   <div>
-    <%= f.label :salary %><br>
+    <%= f.label :salary, t('labels.income.salary') %><br>
     <%= f.text_field :salary %>
   </div>
   <div>
-    <%= f.submit %>
+    <%= f.submit %> | <%= link_to t('actions.back'), incomes_path %>
   </div>
 <% end %>

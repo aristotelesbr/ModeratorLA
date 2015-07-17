@@ -2,15 +2,15 @@
 
 <%= form_for @expense do |f| %>
 <div>
-  <%= f.label :value %>
+  <%= f.label :value, t('labels.expense.value') %>
   <%= f.text_field :value %>
 </div>
 <div>
-  <%= f.label :description %>
+  <%= f.label :description, t('labels.expense.description') %>
   <%= f.text_area :description %>
 </div>
 <div>
-  <%= f.label :card %>
+  <%= f.label :card, t('labels.expense.card') %>
   <%= f.check_box :card %>
 </div>
 

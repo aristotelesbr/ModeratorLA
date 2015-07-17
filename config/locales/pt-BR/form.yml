@@ -1,0 +1,31 @@
+pt-BR:
+  labels:
+    expense:
+      value: 'Valor'
+      description: 'Descrição'
+      card: 'Cartão ?'
+
+      show:
+        value: 'Valor'
+        description: 'Descrição'
+        card: 'Cartão'
+        date: 'Data do registro'
+
+    income:
+      name: 'Nome'
+      salary: 'Salário'
+
+      show:
+        name: 'Nome'
+        salary: 'Salário'
+
+
+  helpers:
+    submit:
+      expense:
+        create: 'Lançar'
+        update: 'Atualizar'
+
+      income:
+        create: 'Criar'
+        update: 'Atualizar'
