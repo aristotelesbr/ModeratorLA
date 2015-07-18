@@ -1,4 +1,4 @@
-class Expense < ActiveRecord::Base
+  class Expense < ActiveRecord::Base
   validates :value, presence: true
   belongs_to :user
 
@@ -8,6 +8,10 @@ class Expense < ActiveRecord::Base
 
   def self.total_card
     where(card: true).sum(:value)
+  end
+
+  def self.desp
+    self.where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
   end
 
   before_save :valida
