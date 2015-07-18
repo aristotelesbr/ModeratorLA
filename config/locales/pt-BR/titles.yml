@@ -2,12 +2,15 @@ pt-BR:
   titles:
     expenses:
       index: 'Relatório'
-      new: 'Adcionar despesa'
+      new: 'Adicionar despesa'
       edit: 'Editar'
       show: 'Detalhes do registro'
 
     incomes:
       index: 'Lista de Rendas'
-      new: 'Adcionar'
+      new: 'Adicionar'
       edit: 'Editar'
       show: 'Detalhes do registro'
+
+    sessions:
+      new: 'Entrar'

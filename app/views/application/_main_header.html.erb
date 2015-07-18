@@ -6,22 +6,16 @@
   <nav>
     <% if user_signed_in? %>
       <ul>
-         <li>
+        <li>
           <%= current_user.email %>
-          </li>
+        </li>
         <li>
           <%=  button_to 'Sair', destroy_user_session_path, method: :delete %>
         </li>
       </ul>
-    <% else %>
-      <ul>
-          <li>
-            <%= link_to 'Entrar', new_user_session_path  %>
-          </li>
-      </ul>
     <% end %>
   </nav>
 
-  <h1><%= page_title %></h1>
-
+  <h1><%= page_title %></h1><br>
 </header>
+

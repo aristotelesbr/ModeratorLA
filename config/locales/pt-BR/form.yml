@@ -29,3 +29,6 @@ pt-BR:
       income:
         create: 'Criar'
         update: 'Atualizar'
+
+      session:
+        new: 'Entrar'

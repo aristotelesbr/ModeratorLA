@@ -1,15 +1,15 @@
 <%= render 'error_messages', record: @income %>
 
-<%= form_for(@income) do |f| %>
-  <div>
-    <%= f.label :name, t('labels.income.name') %><br>
-    <%= f.text_field :name %>
+<%= form_for @income do |f| %>
+<div>
+  <%= f.label :name, t('labels.income.name') %>
+  <%= f.text_field :name %>
+
+  <%= f.label :salary, t('labels.income.salary') %>
+  <%= f.text_field :salary %><br>
+
+  <div class='submit-form'>
+    <%= f.submit class: 'btn btn-default btn-lg' %>  <%= link_to t('actions.back'), incomes_path %>
   </div>
-  <div>
-    <%= f.label :salary, t('labels.income.salary') %><br>
-    <%= f.text_field :salary %>
-  </div>
-  <div>
-    <%= f.submit %> | <%= link_to t('actions.back'), incomes_path %>
-  </div>
+</div>
 <% end %>

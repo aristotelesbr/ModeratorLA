@@ -4,7 +4,6 @@
  */
 
 
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -41,6 +40,23 @@ header h1 {
   margin: 0;
   margin-left: 15px;
   padding-left: 15px;
+}
+
+form > div:last-child:not(.no-separator) {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.receita{
+  border-top: 1px;
+  display: inline;
+  margin-left: 615px;
+}
+
+.menu{
+  float: left;
+  display: inline;
+  margin-left: 80%;
 }
 
 nav {
@@ -109,6 +125,12 @@ li:hover .actions {
 
 label {
   display: block;
+  margin-top: 15px
+}
+
+.submit-form{
+  display: block;
+  margin-top: 20px;
 }
 
 input[type="text"],
@@ -153,13 +175,4 @@ footer {
 
 footer p {
   margin: 0;
-}
-
-.task-form {
-  position: relative;
-}
-
-form > div:last-child:not(.no-separator) {
-  border-top: 1px solid #ccc;
-  padding-top: 15px;
 }
