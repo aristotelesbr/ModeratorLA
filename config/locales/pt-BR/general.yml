@@ -1,0 +1,4 @@
+pt-BR:
+  reports:
+    index:
+      message: 'Preencha os campos com data de inicio e fim para busca'

@@ -10,6 +10,16 @@ class ExpensesController < ApplicationController
     @result = (@income - @expense)
   end
 
+  def search
+    if params[:data1].present? && params[:data2].present?
+      @expenses = Expense.where( created_at: params[:data1].to_date.beginning_of_day..params[:data2].to_date.end_of_day)
+      respond_to :js
+    else
+      flash.now[:alert] = "Você precisa preenhcer ambas as datas né tio."
+      @expenses = Expense.where( created_at: Date.today.beginning_of_month..Date.today.end_of_month)
+    end
+  end
+
   def new
     @expense = current_user.expenses.build
   end

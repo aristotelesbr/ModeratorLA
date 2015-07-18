@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'devise', '~> 3.5.1'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'rails-i18n', '~> 4.0.4'
+gem 'jquery-datetimepicker-rails'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

@@ -1,6 +1,6 @@
 <p>
   &#x2326; <strong>Salário liquido:</strong>
-  <%= @income %>$ | <%= link_to 'Filtrar uma busca' %>
+  <%= @income %>$ | <%= link_to 'Buscar por data', reports_index_path %>
 </p>
 <table class="table table-bordered">
   <thead>
@@ -17,6 +17,7 @@
         <td><%= expense.value %></td>
       </tr>
     <% end %>
+    <i>Gastos rescentes</i>
   </tbody>
 </table>
   <p class="bg-danger">

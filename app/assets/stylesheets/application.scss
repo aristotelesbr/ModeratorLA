@@ -3,10 +3,9 @@
  *= require_self
  */
 
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "jquery.datetimepicker";
 
 body {
   font: normal 18px/1.5 "Helvetica Neue", sans-serif;
