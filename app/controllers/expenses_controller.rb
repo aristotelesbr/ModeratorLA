@@ -8,6 +8,8 @@ class ExpensesController < ApplicationController
     @income = Income.sum(:salary)
     @expense = Expense.sum(:value)
     @result = (@income - @expense)
+
+
   end
 
   def search
@@ -33,7 +35,7 @@ class ExpensesController < ApplicationController
     if @expense.save
       redirect_to @expense, notice: 'notice.expense.success'
     else
-      render 'new'
+      redirect_to root_path, alert: 'Estorou o limite.'
     end
   end
 
@@ -50,7 +52,7 @@ class ExpensesController < ApplicationController
 
   def destroy
     @expense.destroy
-    redirect_to root_path, alert: 'alert.expense.destroy'
+      redirect_to root_path, alert: 'alert.expense.destroy'
   end
 
   private

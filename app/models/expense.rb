@@ -10,7 +10,11 @@ class Expense < ActiveRecord::Base
     where(card: true).sum(:value)
   end
 
-  # def self.sum_salario
-  #   self.includes(:income).sum(:salary)
-  # end
+  before_save :valida
+
+  protected
+
+  def valida
+    self.value < (1900)
+  end
 end
