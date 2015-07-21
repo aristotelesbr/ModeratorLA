@@ -14,11 +14,11 @@
     where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
   end
 
-  before_save :valida
+  before_save :validate_salary
 
   protected
 
-  def valida
-    self.value < (1900)
+  def validate_salary
+    self.value < Income.sum(:salary)
   end
 end
