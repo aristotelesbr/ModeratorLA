@@ -10,4 +10,5 @@ module ApplicationHelper
 
     t(scope, scope: 'titles')
   end
+
 end

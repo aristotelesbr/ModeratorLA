@@ -6,9 +6,10 @@ class ExpensesController < ApplicationController
     @total = Expense.total
     @total_card = Expense.total_card
     @income = Income.sum(:salary)
-    @expense = Expense.sum(:value)
-    @result = (@income - @expense)
-
+    @expense_current = Expense.where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
+    @difference = (@income - @expense_current)
+    @desp = Expense.desp
+    @expense_current_month = Expense.where(created_at: Date.today.beginning_of_month..Date.today.end_of_month)
 
   end
 

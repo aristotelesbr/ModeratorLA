@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'reports/index'
+  get 'reports/list'
 
   devise_for :users, :skip => [:registrations]
   as :user do

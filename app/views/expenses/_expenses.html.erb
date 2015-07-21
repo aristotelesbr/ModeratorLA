@@ -11,9 +11,13 @@
       <tr>
         <th><%= link_to expense.description, expense %></th>
         <th><%= expense.created_at.strftime("%d %b. %Y") %></th>
+        <th><%= expense.value %></th>
       </tr>
     <% end %>
   </tbody>
 </table>
 <% end %>
-<%= @desp %>
+<p class="bg-danger">
+  <strong>Total de gastos neste mês</strong>
+  <%= sum_expenses %>$
+<div>

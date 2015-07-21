@@ -3,7 +3,7 @@
   belongs_to :user
 
   def self.total
-    sum(:value)
+    where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
   end
 
   def self.total_card
@@ -11,7 +11,7 @@
   end
 
   def self.desp
-    self.where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
+    where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
   end
 
   before_save :valida
