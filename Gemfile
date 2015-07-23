@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.1'
 
 # Gems custom
 gem 'devise', '~> 3.5.1'
