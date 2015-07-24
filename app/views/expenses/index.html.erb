@@ -1,6 +1,8 @@
 <p>
-  &#x2326; <strong>Salário liquido:</strong>
-  <%= @income %>$ | <%= link_to 'Buscar por data', reports_index_path %>
+  &#x2326; <strong>Receita deste mês:</strong>
+  R$<%= @income_current %> | &#x2326; <strong>Você economizou:</strong>
+  R$<%= @difference_month_ago%> |
+  <%= link_to 'Buscar por data', reports_index_path %>
 </p>
 
 <table class="table table-bordered">
@@ -23,12 +25,12 @@
 </table>
   <p class="bg-danger">
     <strong>Total geral:</strong>
-      <%= @total %>$ |
+      R$<%= @total %> |
     <strong>Debito em cartão:</strong>
-      <%= @total_card %>$
+      R$<%= @total_card %>
     <div class='receita'>
      <strong>Valor em caixa:</strong>
-      <%= @difference %>$ &#x232B;
+      R$<%= @difference_current %> &#x232B;
     </div>
   </p>
 

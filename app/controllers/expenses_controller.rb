@@ -5,12 +5,13 @@ class ExpensesController < ApplicationController
     @expenses = Expense.all
     @total = Expense.total
     @total_card = Expense.total_card
-    @income = Income.sum(:salary)
-    @expense_current = Expense.where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
-    @difference = (@income - @expense_current)
-    @desp = Expense.desp
-    @expense_current_month = Expense.where(created_at: Date.today.beginning_of_month..Date.today.end_of_month)
-
+    @income_current = Income.income_current
+    @expense_current = Expense.expense_current
+    @expense_current_month = Expense.expense_current_month
+    @income_mont_ago = Income.income_mont_ago
+    @expense_month_ago = Expense.expense_month_ago
+    @difference_month_ago = @income_mont_ago - @expense_month_ago
+    @difference_current = (@income_current - @expense_current) + @difference_month_ago
   end
 
   def search

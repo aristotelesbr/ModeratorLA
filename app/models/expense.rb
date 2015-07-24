@@ -6,10 +6,23 @@
     where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
   end
 
+  def self.expense_current
+    where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
+  end
+
+  def self.expense_month_ago
+    where(created_at: 1.month.ago.beginning_of_month..1.month.ago.end_of_month).sum(:value)
+  end
+
+  def self.expense_current_month
+    where(created_at: Date.today.beginning_of_month..Date.today.end_of_month)
+  end
+
   def self.total_card
     where(card: true).sum(:value)
   end
 
+  # Controller/reports
   def self.desp
     where(created_at: Date.today.beginning_of_month..Date.today.end_of_month).sum(:value)
   end
