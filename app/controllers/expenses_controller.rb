@@ -6,12 +6,15 @@ class ExpensesController < ApplicationController
     @total = Expense.total
     @total_card = Expense.total_card
     @income_current = Income.income_current
-    @expense_current = Expense.expense_current
+
+    @expense_current_sum = Expense.expense_current_sum
     @expense_current_month = Expense.expense_current_month.page(params['page']).per(10)
+
     @income_mont_ago = Income.income_mont_ago
     @expense_month_ago = Expense.expense_month_ago
+
     @difference_month_ago = @income_mont_ago - @expense_month_ago
-    @difference_current = (@income_current - @expense_current) + @difference_month_ago
+    @difference_current = (@income_current - @expense_current_sum) + @difference_month_ago
   end
 
   def search
