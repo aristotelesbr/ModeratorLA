@@ -8,7 +8,7 @@ class ExpensesController < ApplicationController
     @income_current = Income.income_current
 
     @expense_current_sum = Expense.expense_current_sum
-    @expense_current_month = Expense.expense_current_month.page(params['page']).per(10)
+    @expense_current_month = Expense.expense_current_month.page(params['page']).per(10).order('created_at DESC')
 
     @income_mont_ago = Income.income_mont_ago
     @expense_month_ago = Expense.expense_month_ago

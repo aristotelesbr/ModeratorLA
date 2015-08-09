@@ -15,7 +15,7 @@
   end
 
   def self.expense_current_month
-    where(created_at: (Date.today.beginning_of_month..Date.today.end_of_day))
+    where(created_at: (Date.today.beginning_of_month..Date.today.end_of_month))
   end
 
   def self.total_card
