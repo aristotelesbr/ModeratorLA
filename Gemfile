@@ -9,6 +9,7 @@ gem 'jquery-datetimepicker-rails'
 gem 'heroku', '~> 3.39.4'
 gem 'kaminari', '~> 0.16.3'
 gem 'bootstrap-kaminari-views'
+gem "cocoon"
 
 # Default Gems
 gem 'rails', '4.2.1'
