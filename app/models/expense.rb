@@ -1,6 +1,8 @@
-  class Expense < ActiveRecord::Base
+class Expense < ActiveRecord::Base
   validates :value, presence: true
   belongs_to :user
+  has_many :portions
+    accepts_nested_attributes_for :portions, reject_if: :all_blank, allow_destroy: true
 
   def self.total
     where(created_at: Date.today.beginning_of_month..Date.today.end_of_day).sum(:value)
@@ -16,10 +18,6 @@
 
   def self.expense_current_month
     where(created_at: (Date.today.beginning_of_month..Date.today.end_of_month))
-  end
-
-  def self.total_card
-    where(card: true).sum(:value)
   end
 
   # Controller/reports

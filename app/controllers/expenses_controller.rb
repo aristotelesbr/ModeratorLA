@@ -4,7 +4,6 @@ class ExpensesController < ApplicationController
   def index
     @expenses = Expense.all
     @total = Expense.total
-    @total_card = Expense.total_card
     @income_current = Income.income_current
 
     @expense_current_sum = Expense.expense_current_sum
@@ -63,7 +62,9 @@ class ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.require(:expense).permit(:value, :description, :card)
+    params.require(:expense).permit(:value,
+     :description, :card, portions_attributes: [
+      :id, :portion_quantity, :card, :_destroy])
   end
 
   def find_expense
