@@ -6,7 +6,6 @@ gem 'devise', '~> 3.5.1'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'rails-i18n', '~> 4.0.4'
 gem 'jquery-datetimepicker-rails'
-gem 'heroku', '~> 3.39.4'
 gem 'kaminari', '~> 0.16.3'
 gem 'bootstrap-kaminari-views'
 gem "cocoon"

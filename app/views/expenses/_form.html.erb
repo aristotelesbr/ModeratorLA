@@ -8,14 +8,6 @@
     <%= f.label :description, t('labels.expense.description') %>
     <%= f.text_area :description %>
 
-    <div id="portions">
-      <%= f.fields_for :portions do |portion| %>
-        <%= render 'portion_fields', f: portion %>
-      <% end %>
-      <div class="links">
-        <%= link_to_add_association 'Cartão?', f, :portions %>
-      </div>
-    </div>
     <div class='submit-form'>
       <%= f.submit class: 'btn btn-default btn-lg' %>  <%= link_to t('actions.back'), root_path %>
     </div>
