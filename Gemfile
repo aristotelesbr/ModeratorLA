@@ -8,7 +8,7 @@ gem 'rails-i18n', '~> 4.0.4'
 gem 'jquery-datetimepicker-rails'
 gem 'kaminari', '~> 0.16.3'
 gem 'bootstrap-kaminari-views'
-gem "cocoon"
+gem 'jquery-turbolinks'
 
 # Default Gems
 gem 'rails', '4.2.1'

@@ -39,7 +39,7 @@ class ExpensesController < ApplicationController
     if @expense.save
       redirect_to @expense, notice: 'notice.expense.success'
     else
-      redirect_to root_path, alert: 'Estorou o limite.'
+      render 'new'
     end
   end
 
@@ -63,8 +63,7 @@ class ExpensesController < ApplicationController
 
   def expense_params
     params.require(:expense).permit(:value,
-     :description, :card, portions_attributes: [
-      :id, :portion_quantity, :card, :_destroy])
+     :description, :quantity, :card )
   end
 
   def find_expense

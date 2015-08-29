@@ -2,11 +2,23 @@
 
 <%= form_for @expense do |f| %>
   <div>
+    <%= f.label :description, t('labels.expense.description') %>
+    <%= f.text_area :description %>
+
     <%= f.label :value, t('labels.expense.value') %>
     <%= f.text_field :value %>
 
-    <%= f.label :description, t('labels.expense.description') %>
-    <%= f.text_area :description %>
+    <strong> Parcelado?</strong>
+    <%= check_box_tag 'MostrarEsconderCampo' %>
+
+    <div id='Campo' style='display:none'>
+      <%= f.label :quantity %>
+      <%= f.select :quantity, ([['1x', 1], ['2x', 2], ['3x', 3], ['4x', 4], ['5x', 5],
+        ['6x', 6], ['7x', 7], ['8x', 8], ['9x', 9], ['10x', 10]]) %>
+
+      <%= f.label :Cartão %>
+      <%= f.select :card, ([['Visa', 'visa'], ['Master', 'master', ['Cred-shop', 'credshop']]) %>
+    </div>
 
     <div class='submit-form'>
       <%= f.submit class: 'btn btn-default btn-lg' %>  <%= link_to t('actions.back'), root_path %>

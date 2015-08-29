@@ -1,7 +1,9 @@
-<p>
-  <strong><%= t('labels.expense.show.value') %>:</strong>
-  <%= @expense.value %>
-</p>
+<% unless @expense.quantity.present? %>
+  <p>
+    <strong><%= t('labels.expense.show.value') %>:</strong>
+    <%= @expense.value %>
+  </p>
+<% end %>
 
 <p>
   <strong><%= t('labels.expense.show.description') %>:</strong>
@@ -13,22 +15,27 @@
   <%= @expense.user.email %>
 </p>
 
-<p>
-  <% if @expense.portions.present? %>
-    <strong>Detalhes do parcelamento:</strong>
-    <% @expense.portions.each do |portion| %>
-      <li> Parcelas: <%= portion.portion_quantity %></li>
-      <li>Cartão: <%= portion.card %></li>
-    <% end %>
-  <% end %>
-</p>
+<% if @expense.quantity.present? %>
+  <p>
+    <strong>Card:</strong>
+    <%= @expense.card %>
+  </p>
+
+  <p>
+    <strong>Parcelado em:</strong>
+    <%= @expense.quantity %>x  de <%= @expense.value %>$
+  </p>
+<% end %>
 
 <p>
   <strong><%= t('labels.expense.show.date') %>:</strong>
   <%= @expense.created_at.strftime("%d %b. %Y") %>
 </p>
 
-<%= link_to t('actions.edit'), edit_expense_path, class: 'btn btn-default btn-lg' %>
+<% unless @expense.quantity.present? %>
+  <%= link_to t('actions.edit'), edit_expense_path, class: 'btn btn-default btn-lg' %>
+<% end %>
+
 <%= link_to t('actions.destroy'), expense_path(@expense), method: :delete,
    data: { confirm: 'Deseja excluir?' } %>
 
