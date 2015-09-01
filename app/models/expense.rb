@@ -30,7 +30,7 @@ class Expense < ActiveRecord::Base
   protected
 
   def create_invoices
-    if quantity.present?
+    if quantity.present? && quantity > 2
         interval = 1.month
         cicles = self.quantity
         start_date = Date.today
