@@ -16,10 +16,10 @@
     <div id='Campo' style='display:none'>
       <%= f.label :quantity %>
       <%= f.select :quantity, ([['1x', 1], ['2x', 2], ['3x', 3], ['4x', 4], ['5x', 5],
-        ['6x', 6], ['7x', 7], ['8x', 8], ['9x', 9], ['10x', 10]]), {include_blank: 'None'}  %>
+        ['6x', 6], ['7x', 7], ['8x', 8], ['9x', 9], ['10x', 10]]), {include_blank: '-------'}  %>
 
       <%= f.label :creditcard %>
-      <%= f.select :creditcard, ([['Visa', 'visa'], ['Master', 'master'], ['Cred-shop', 'credshop']]), {include_blank: 'None'} %>
+      <%= f.select :creditcard, ([['Visa', 'visa'], ['Master', 'master'], ['Cred-shop', 'credshop']]), {include_blank: '-------'} %>
     </div>
 
     <div class='submit-form'>

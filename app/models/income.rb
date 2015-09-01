@@ -5,7 +5,7 @@ class Income < ActiveRecord::Base
   end
 
   def self.income_mont_ago
-    where(created_at: 1.month.ago.beginning_of_month..1.month.ago.end_of_day).sum(:salary)
+    where(created_at: 1.month.ago.beginning_of_month..1.month.ago.end_of_month).sum(:salary)
   end
 
 end
