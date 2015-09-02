@@ -30,20 +30,24 @@ class Expense < ActiveRecord::Base
   protected
 
   def create_invoices
-    if quantity.present? && quantity > 2
+    if quantity.present? && quantity > 1
         interval = 1.month
         cicles = self.quantity
         start_date = Date.today
         current_date = start_date
         portions = self.value / self.quantity
+        update(
+          value: portions,
+          created_at: (start_date += interval)
+          )
 
         cicles.times do
-          self.update(value: portions)
           Expense.create(
             value:  portions,
             description: description,
             user_id: user_id,
-            created_at: (start_date += interval)
+            created_at: (start_date += interval),
+            updated_at: (created_at) #Começa a cdebitar no mes seguinte
             )
 
             puts current_date
