@@ -47,7 +47,7 @@ class Expense < ActiveRecord::Base
             description: description,
             user_id: user_id,
             created_at: (start_date += interval),
-            updated_at: (created_at) #Começa a cdebitar no mes seguinte
+            updated_at: (created_at) #Começa a debitar no mes seguinte
             )
 
             puts current_date
